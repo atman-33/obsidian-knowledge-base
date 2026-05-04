@@ -1,7 +1,7 @@
 ---
 name: kb-init
 description: Initialize PARA Knowledge Base in your Obsidian vault. Creates index files, log, and adds KB rules to AGENTS.md. Run this first before using other kb- skills.
-argument-hint: [--force]
+argument-hint: "[--force]"
 ---
 
 # KB Init — PARA Knowledge Base Setup

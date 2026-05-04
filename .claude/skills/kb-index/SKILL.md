@@ -1,7 +1,7 @@
 ---
 name: kb-index
 description: Update Knowledge Base indexes. Smart mode detects changes and updates only what's needed. Full rebuild available with --full flag. Use after adding/moving documents or when indexes feel stale.
-argument-hint: [--full] [--category <name>] [--dry-run]
+argument-hint: "[--full] [--category <name>] [--dry-run]"
 ---
 
 # KB Index — Smart Index Update

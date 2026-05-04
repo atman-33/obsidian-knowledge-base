@@ -1,7 +1,7 @@
 ---
 name: kb-ingest
 description: Ingest documents into the PARA Knowledge Base. Classifies, moves, links, and indexes new documents from Inbox or a specified path. Use when new documents need processing into the vault.
-argument-hint: [file-or-folder-path]
+argument-hint: "[file-or-folder-path]"
 ---
 
 # KB Ingest — Document Intake + Classification + Linking

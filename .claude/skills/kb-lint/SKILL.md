@@ -1,7 +1,7 @@
 ---
 name: kb-lint
 description: Health check for the PARA Knowledge Base. Detects orphan documents, broken links, index drift, tag issues, and stale content. Run periodically or as part of weekly review.
-argument-hint: [--fix] [--category <name>]
+argument-hint: "[--fix] [--category <name>]"
 ---
 
 # KB Lint — Knowledge Base Health Check
