@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "82425317f631c756",
+        "id": "a69e742c986849c6",
         "type": "tabs",
         "children": [
           {
-            "id": "72cda5b085cd894e",
+            "id": "58768bea6cbd4485",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -182,10 +182,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "72cda5b085cd894e",
+  "active": "58768bea6cbd4485",
   "lastOpenFiles": [
-    "Attachments/Pasted image 20260504194406.png",
+    "Excalidraw/Drawing 2026-05-04 19.48.12.excalidraw.md",
+    "Excalidraw/_Template.excalidraw.md",
+    "Excalidraw/Drawing 2026-05-04 19.46.27.excalidraw.md",
     "Inbox/Welcome.md",
+    "Attachments/Pasted image 20260504194406.png",
     "Excalidraw",
     "Templates/s/Pasted image 20260504193119.png",
     "Templates/daily.md",
