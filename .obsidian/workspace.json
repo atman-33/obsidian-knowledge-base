@@ -180,8 +180,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "b8e58485391a074d",
+  "active": "859c95c62e251bad",
   "lastOpenFiles": [
+    "templates/CLAUDE.md.template",
+    "templates/_index.md.template",
+    "templates",
     "Welcome.md"
   ]
 }
