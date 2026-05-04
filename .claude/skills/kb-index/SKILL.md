@@ -28,11 +28,11 @@ Choose the lightest approach that fits the situation:
 
 ### Tier 2: Smart Diff Update (default kb-index) — ~500-1500 tokens
 **When:** A few files changed, or "something feels off."
-**How:** Compare existing _index.md entries against actual files on disk. Only process differences.
+**How:** Compare existing _index.md entries against actual files on disk. Only process differences. Do not re-render from `templates/_index.md.template` in this mode.
 
 ### Tier 3: Full Rebuild (kb-index --full) — ~3-4K tokens
 **When:** Major reorganization, initial setup, or indexes are badly corrupted.
-**How:** Scan everything from scratch, regenerate all indexes.
+**How:** Scan everything from scratch, regenerate all indexes from `templates/_index.md.template`.
 
 ## Tier 2: Smart Diff — Execution Flow
 
@@ -103,15 +103,12 @@ Only runs with `--full` flag. Same as before:
   Archive/: count completed vs paused
 
 2. GENERATE _index.md per category (from scratch)
-  ---
-  title: {Category} Index
-  type: kb-index
-  updated: {today}
-  ---
-  # {Category Name}
-  {Summary line}
-  - **[[item]]** — description
-  ...
+  Read templates/_index.md.template
+  Substitute:
+    {{CATEGORY}} -> category name
+    {{DATE}} -> today
+    {{SUMMARY_LINE}} -> counts / brief overview
+    {{ENTRIES}} -> generated lines for that category
 
   Rules:
   - 10-20 lines per index
@@ -125,6 +122,13 @@ Only runs with `--full` flag. Same as before:
 4. LOG
   "[date] index-rebuild | N categories | M total entries"
 ```
+
+## Template Usage Contract
+
+- `templates/_index.md.template` defines the canonical `_index.md` shape.
+- Use the template for `kb-index --full` rebuilds.
+- Do not use the template for Tier 1 or Tier 2 updates; edit the existing `_index.md` in place.
+- Preserve the generated structure when applying incremental updates: update date, summary line, and entries without inventing a new layout.
 
 ## Smart Detection Details
 
