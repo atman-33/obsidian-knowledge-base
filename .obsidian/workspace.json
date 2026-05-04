@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inbox/Welcome.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "AGENTS"
             }
           }
         ]
@@ -182,36 +182,40 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "58768bea6cbd4485",
+  "active": "b8e58485391a074d",
   "lastOpenFiles": [
+    "Inbox/Projects/Beta/Untitled.md",
+    "Inbox/Projects/Beta",
+    "Inbox/Projects/Alpha/Untitled.md",
+    "Inbox/Projects/Alpha",
+    "Inbox/Projects/Project Alpha/Untitled.md",
+    "Inbox/Projects/Project Alpha",
+    "Inbox/Projects/Project Beta/Untitled.md",
+    "Inbox/Projects/Project Beta",
+    "Inbox/Projects",
+    "Inbox/Work/Operations",
+    "Inbox/Work/Reviews",
+    "Inbox/Work/1on1",
+    "Inbox/Work/Daily Reports",
+    "Inbox/Work",
+    "README_ja.md",
+    "Inbox/Welcome.md",
     "Excalidraw/Drawing 2026-05-04 19.48.12.excalidraw.md",
     "Excalidraw/_Template.excalidraw.md",
     "Excalidraw/Drawing 2026-05-04 19.46.27.excalidraw.md",
-    "Inbox/Welcome.md",
     "Attachments/Pasted image 20260504194406.png",
-    "Excalidraw",
     "Templates/s/Pasted image 20260504193119.png",
     "Templates/daily.md",
-    "Attachments",
     "Inbox/Project Beta/Untitled.md",
     "Inbox/Project Alpha/Untitled.md",
-    "Inbox/Project Beta",
-    "Inbox/Project Alpha",
     "Inbox/Untitled.md",
     "AGENTS.md",
-    "README_ja.md",
     "0. Common/daily/2026-05-04.md",
     "0. Common/log.md",
-    "0. Common/daily",
     "0. Common/index.md",
     "4. Archive/_index.md",
     "3. Resources/_index.md",
     "1. Projects/_index.md",
-    "2. Areas/_index.md",
-    "Inbox",
-    "4. Archive",
-    "3. Resources",
-    "2. Areas",
-    "1. Projects"
+    "2. Areas/_index.md"
   ]
 }
