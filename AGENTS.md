@@ -81,5 +81,5 @@ Optional fields: `related`, `source`, `summary`
 ## Safety Rules
 
 - Do not modify `.obsidian/` settings unless explicitly requested.
-- Treat `templates/` and `.claude/skills/` as source scaffolding; do not repurpose generated KB files as templates.
+- Treat `Templates/` and `.claude/skills/` as source scaffolding; do not repurpose generated KB files as templates.
 - Keep generated KB maintenance files in English unless a note explicitly requires another language.

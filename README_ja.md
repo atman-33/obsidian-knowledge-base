@@ -179,8 +179,8 @@ index を更新します。
 | パス | 役割 |
 |---|---|
 | `.claude/skills/` | Knowledge Base および Obsidian 関連スキル |
-| `templates/_index.md.template` | カテゴリ index のテンプレート |
-| `templates/AGENTS.md.template` | vault ルール用テンプレート |
+| `Templates/_index.md.template` | カテゴリ index のテンプレート |
+| `Templates/AGENTS.md.template` | vault ルール用テンプレート |
 | `.obsidian/` | Obsidian vault 設定 |
 | `Welcome.md` | 初期ノート |
 

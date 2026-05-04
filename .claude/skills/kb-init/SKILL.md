@@ -11,7 +11,7 @@ Set up the Knowledge Base layer on an existing PARA-structured Obsidian vault.
 ## What It Does
 
 1. **Detect vault** — find `.obsidian/` to confirm vault root, locate PARA directories
-2. **Create category indexes** — `_index.md` in each PARA directory (Projects, Areas, Resources, Archive) using `templates/_index.md.template` as the skeleton
+2. **Create category indexes** — `_index.md` in each PARA directory (Projects, Areas, Resources, Archive) using `Templates/_index.md.template` as the skeleton
 3. **Create top-level index** — `0. Common/index.md` (~30 lines, vault overview)
 4. **Create activity log** — `0. Common/log.md` (append-only)
 5. **Update AGENTS.md** — append KB rules section (preserve existing content)
@@ -47,7 +47,7 @@ Step 2: Check existing state
     Otherwise → ask user: overwrite, skip, or abort
 
 Step 3: Scan and generate _index.md per category
-  Read templates/_index.md.template once
+  Read Templates/_index.md.template once
   For each PARA directory:
     List subdirectories and standalone .md files
     Read overview files for status (0.*.md, *-Project.md, project-overview.md)
@@ -73,7 +73,7 @@ Step 5: Create 0. Common/log.md
 
 Step 6: Update AGENTS.md
   If exists → read, append KB rules after existing content
-  If missing → create from templates/AGENTS.md.template
+  If missing → create from Templates/AGENTS.md.template
   KB rules section includes:
     Vault structure description
     KB operation rules (ingest/query/lint)
@@ -94,7 +94,7 @@ Step 7: Detect tooling
 
 ## Index Template Contract
 
-- `templates/_index.md.template` is the source of truth for per-category `_index.md` structure.
+- `Templates/_index.md.template` is the source of truth for per-category `_index.md` structure.
 - Use it when creating missing indexes during init.
 - Substitute placeholders only; do not handcraft a different frontmatter or heading layout.
 - Later incremental updates may edit the generated `_index.md` directly; they do not need to re-render from the template.
