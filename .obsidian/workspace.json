@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "templates/daily.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "daily"
             }
           }
         ]
@@ -182,9 +182,13 @@
   },
   "active": "859c95c62e251bad",
   "lastOpenFiles": [
+    "0. Common/daily/2026-05-04.md",
+    "templates/daily.md",
     "0. Common/log.md",
-    "AGENTS.md",
+    "0. Common/daily",
     "0. Common/index.md",
+    "Welcome.md",
+    "AGENTS.md",
     "4. Archive/_index.md",
     "3. Resources/_index.md",
     "1. Projects/_index.md",
@@ -198,8 +202,6 @@
     "README_ja.md",
     "templates/AGENTS.md.template",
     "templates/CLAUDE.md.template",
-    "templates/_index.md.template",
-    "templates",
-    "Welcome.md"
+    "templates/_index.md.template"
   ]
 }
