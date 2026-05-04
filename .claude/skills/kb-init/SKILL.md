@@ -1,6 +1,6 @@
 ---
 name: kb-init
-description: Initialize PARA Knowledge Base in your Obsidian vault. Creates index files, log, and adds KB rules to CLAUDE.md. Run this first before using other kb- skills.
+description: Initialize PARA Knowledge Base in your Obsidian vault. Creates index files, log, and adds KB rules to AGENTS.md. Run this first before using other kb- skills.
 argument-hint: [--force]
 ---
 
@@ -14,7 +14,7 @@ Set up the Knowledge Base layer on an existing PARA-structured Obsidian vault.
 2. **Create category indexes** — `_index.md` in each PARA directory (Projects, Areas, Resources, Archive)
 3. **Create top-level index** — `0. Common/index.md` (~30 lines, vault overview)
 4. **Create activity log** — `0. Common/log.md` (append-only)
-5. **Update CLAUDE.md** — append KB rules section (preserve existing content)
+5. **Update AGENTS.md** — append KB rules section (preserve existing content)
 6. **Detect obsidian CLI** — check availability, configure fallback strategy
 
 ## Prerequisites
@@ -69,9 +69,9 @@ Step 5: Create 0. Common/log.md
   Header + initial entry:
     "[date] init | KB initialized | N index files created"
 
-Step 6: Update CLAUDE.md
+Step 6: Update AGENTS.md
   If exists → read, append KB rules after existing content
-  If missing → create from templates/CLAUDE.md.template
+  If missing → create from templates/AGENTS.md.template
   KB rules section includes:
     Vault structure description
     KB operation rules (ingest/query/lint)

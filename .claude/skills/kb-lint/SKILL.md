@@ -36,7 +36,7 @@ Files in PARA directories that have:
 - No entry in any `_index.md`
 - No tags
 
-Exclude from check: `0. Common/daily/*`, `0. Common/weekly/*`, `_index.md`, `CLAUDE.md`, `Dashboard.md`.
+Exclude from check: `0. Common/daily/*`, `0. Common/weekly/*`, `_index.md`, `AGENTS.md`, `Dashboard.md`.
 
 **Report:** List orphans with suggested action (link, tag, or archive).
 

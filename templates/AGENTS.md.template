@@ -18,7 +18,7 @@ This vault follows the PARA method:
 This vault uses the LLM Knowledge Base pattern (inspired by Karpathy's llm-wiki):
 - **Inbox/** = raw input (landing zone)
 - **PARA directories** = compiled knowledge (organized, linked, indexed)
-- **CLAUDE.md** = schema (rules governing the vault)
+- **AGENTS.md** = schema (rules governing the vault)
 
 ### Operations
 
