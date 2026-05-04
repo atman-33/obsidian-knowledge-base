@@ -182,7 +182,9 @@
   },
   "active": "859c95c62e251bad",
   "lastOpenFiles": [
+    "README_ja.md",
     "templates/AGENTS.md.template",
+    "templates/CLAUDE.md.template",
     "templates/_index.md.template",
     "templates",
     "Welcome.md"
