@@ -159,13 +159,13 @@
             }
           },
           {
-            "id": "8f3035fd70d68ba7",
+            "id": "7c616cdcc9909671",
             "type": "leaf",
             "state": {
-              "type": "github-copilot-chat-view",
+              "type": "agent-sidebar-view",
               "state": {},
-              "icon": "bot-message-square",
-              "title": "Copilot Chat"
+              "icon": "bot",
+              "title": "AI agent sidebar"
             }
           },
           {
@@ -186,6 +186,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "github-copilot-chat:Open Copilot Chat": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -197,7 +198,8 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "templater-obsidian:Templater": false,
       "obsidian42-brat:BRAT": false,
-      "opencode-obsidian:OpenCode": false
+      "opencode-obsidian:OpenCode": false,
+      "ai-agent-sidebar:Open AI agent sidebar": false
     }
   },
   "active": "247afb8b1ffd773d",

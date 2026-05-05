@@ -1,0 +1,36 @@
+{
+  "agents": {
+    "claude": {
+      "enabled": true,
+      "extraArgs": "",
+      "yoloMode": false,
+      "accessMode": "cli"
+    },
+    "codex": {
+      "enabled": false,
+      "extraArgs": "",
+      "yoloMode": false,
+      "accessMode": "cli"
+    },
+    "gemini": {
+      "enabled": false,
+      "extraArgs": "",
+      "yoloMode": false,
+      "accessMode": "api"
+    },
+    "copilot": {
+      "enabled": true,
+      "extraArgs": "--model gpt-5.4",
+      "yoloMode": false,
+      "accessMode": "cli"
+    },
+    "openai-compat": {
+      "enabled": false,
+      "extraArgs": "",
+      "yoloMode": false,
+      "accessMode": "api"
+    }
+  },
+  "persistConversations": false,
+  "debugMode": false
+}

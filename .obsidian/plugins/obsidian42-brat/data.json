@@ -1,11 +1,11 @@
 {
   "pluginList": [
-    "Pierrad/obsidian-github-copilot",
+    "coreydaley/obsidian-ai-agent-sidebar-plugin",
     "mtymek/opencode-obsidian"
   ],
   "pluginSubListFrozenVersion": [
     {
-      "repo": "Pierrad/obsidian-github-copilot",
+      "repo": "coreydaley/obsidian-ai-agent-sidebar-plugin",
       "version": ""
     },
     {
