@@ -219,7 +219,7 @@ In this vault, each folder plays the following role.
 
 | Folder | Main purpose | Typical contents |
 |---|---|---|
-| `0. Common/` | Shared operational files for the entire vault | `index.md`, `log.md`, daily notes, dashboards |
+| `0. Common/` | Shared operational files for the entire vault | `index.md`, `log.md`, dashboards |
 | `1. Projects/` | Active work with deadlines or deliverables | project notes, plans, tasks, meeting notes |
 | `2. Areas/` | Ongoing responsibility areas without an end date | career, health, family, recurring work management notes |
 | `3. Resources/` | Reference knowledge and materials | technical notes, research notes, cheat sheets, reading notes |

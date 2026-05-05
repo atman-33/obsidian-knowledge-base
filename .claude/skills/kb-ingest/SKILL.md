@@ -6,7 +6,7 @@ argument-hint: "[file-or-folder-path]"
 
 # KB Ingest — Document Intake + Classification + Linking
 
-Process new documents into the Knowledge Base. Reads content, classifies into the right PARA location, generates metadata, creates wikilinks, updates related documents, and maintains indexes.
+Process new documents into the Knowledge Base. Reads content, classifies into the right PARA location, plans a folder-first destination and canonical filename, generates metadata, creates wikilinks, updates related documents, and maintains indexes.
 
 ## Usage
 
@@ -41,13 +41,30 @@ For each document to ingest:
 | Unclear | Ask user |
 
 - Identify related existing documents by topic, tags, or content overlap
+- Identify the best existing container folder inside the target category
+- Propose a canonical title and filename before moving the file
 
-### 3. MOVE
-- Move file to target PARA directory
-- Create subdirectory if needed (ask user first)
-- If already in correct location, skip move
+### 3. PLAN PLACEMENT
+- Decide the full destination before writing anything:
+  - target PARA category
+  - target container subdirectory
+  - canonical filename
+- Default to **subdirectory-first** placement for `1. Projects/`, `2. Areas/`, `3. Resources/`, and `4. Archive/`
+- Reuse an existing folder when there is a strong semantic match
+- If no suitable folder exists, propose a new subdirectory and **ask the user before creating it**
+- Do not place newly ingested files directly in a category root unless:
+  - the user explicitly prefers a standalone note, or
+  - no meaningful container exists yet and the user declines creating one
+- If the plan includes a rename, show `old name -> new name` in the confirmation summary
+- When confidence is low or multiple containers are plausible, ask user
 
-### 4. FRONTMATTER
+### 4. MOVE
+- Move file to the planned subdirectory
+- Create the approved subdirectory if needed
+- Rename the file during the move when the canonical filename is approved
+- If already in the correct container with the correct filename, skip move/rename
+
+### 5. FRONTMATTER
 Add or update frontmatter fields:
 
 ```yaml
@@ -65,13 +82,16 @@ source: https://...           # URL or citation (if applicable)
 ---
 ```
 
-### 5. SUMMARIZE (long documents only)
+Additional rule:
+- `title` should normally match the canonical filename without the `.md` extension
+
+### 6. SUMMARIZE (long documents only)
 For documents over 500 words:
 - Generate a concise summary after frontmatter (under 200 words)
 - For papers: title, authors, key contribution, method, results
 - Format: `> **Summary:** ...` callout block
 
-### 6. WIKILINK — Create Forward Links
+### 7. WIKILINK — Create Forward Links
 Scan document content for existing vault entities:
 - Document titles → `[[Document Title]]`
 - Project names → `[[project-name]]`
@@ -83,21 +103,63 @@ Rules:
 - Maximum ~10 auto-links per document
 - Don't link common words even if a doc exists with that name
 
-### 7. BACKLINK — Update Related Documents
+### 8. BACKLINK — Update Related Documents
 For each strongly related document (max 3):
 - Check if it already references the new doc
 - If not, add to its `## Related Documents` section (create section if missing; use `## 관련 문서` for Korean vaults)
 - Append: `- [[New Document]] — brief context`
 
-### 8. INDEX — Update Indexes
-- Add one-line entry to the relevant `_index.md`
+### 9. INDEX — Update Indexes
+- If the note lives inside a subdirectory, add or refresh the category index entry for that container folder
+- If the user explicitly keeps the note as a standalone root note, add or refresh the note entry directly
 - Update counts in top-level `0. Common/index.md`
 - Maintain sort order within index
 
-### 9. LOG
+### 10. LOG
 Append to `0. Common/log.md`:
 ```
 [2026-04-05] ingest | Document Title | → 2. Areas/Paper/ | updated 2 docs
+```
+
+## Placement and Naming Rules
+
+### Container Selection Rules
+- `1. Projects/`: always place documents inside a project folder
+- `2. Areas/`: place documents inside an area folder named for an ongoing responsibility or durable life domain
+- `3. Resources/`: place documents inside a topic or reference-material folder
+- `4. Archive/`: preserve the source container when practical; otherwise propose an archive container first
+- New container names should describe a durable theme, not a one-off document title
+- Existing loose notes may remain as-is; **folder-first applies to new ingest by default**
+
+### Filename Canonicalization Rules
+- Determine the canonical title in this priority order:
+  1. Existing frontmatter `title`
+  2. H1 heading
+  3. First meaningful section heading
+  4. Current filename
+- Keep an already clear filename when it already matches the canonical title closely
+- Rename low-information or temporary filenames such as `Untitled`, `IMG_1234`, `meeting notes`, `copy`, `final`, `draft`, or date-only names that are missing the actual subject
+- Use one of these filename patterns when renaming:
+  - `YYYY-MM-DD｜Title` for date-centric records such as sessions, meetings, letters, logs, and event notes
+  - `Title` for evergreen concept or reflection notes
+  - `Domain｜Artifact` for reusable prompts, procedures, templates, and reference material
+- Keep the note language; do not translate titles just to normalize filenames
+- Remove Windows-invalid characters and collapse redundant whitespace or punctuation
+- Keep version suffixes only when multiple live variants are intentionally retained
+- Ask the user before renaming when the current filename is still meaningful, or when the note may already be referenced from elsewhere in the vault
+
+### Confirmation Summary Format
+Before executing any move that creates a new folder or renames a file, present a short plan:
+
+```text
+Proposed ingest plan
+- source: Inbox/...
+- target: 2. Areas/<folder>/
+- folder action: reuse existing | create new folder
+- filename: old-name.md -> new-name.md
+- confidence: high|medium|low
+- rationale: why this folder and filename fit
+Proceed?
 ```
 
 ## Batch Mode
@@ -105,9 +167,11 @@ Append to `0. Common/log.md`:
 When processing multiple files (Inbox/ or folder):
 1. Read all files first for batch classification
 2. Classify all at once (cross-document decisions are better)
-3. Process moves, links, and backlinks
-4. Update indexes once at end (not per-file)
-5. Single batch log entry
+3. Build one combined placement plan covering new folders and renames
+4. Ask once for approval if any new subdirectories or renames are proposed
+5. Process moves, links, and backlinks after approval
+6. Update indexes once at end (not per-file)
+7. Single batch log entry
 
 ## Obsidian CLI Integration
 
@@ -127,7 +191,11 @@ Read frontmatter for existing tags/links
 ## Safety Rules
 
 - **Never delete** the original file — move only
+- **Folder-first is the default** for new ingest in Projects, Areas, Resources, and Archive
+- **Never create** a new subdirectory without explicit user approval
+- **Ask user** before renaming files, unless the filename is clearly temporary or low-information
+- **Ask user** when classification confidence is low or multiple containers are plausible
+- **Do not reorganize** existing PARA notes into folders unless the user asks for cleanup
 - **Never modify** source document content beyond frontmatter and summary
 - **Preserve** all existing wikilinks and formatting
-- **Ask user** before creating new subdirectories
-- **Ask user** when classification confidence is low
+- Perform rename/move decisions **before** generating new links, backlinks, or index entries

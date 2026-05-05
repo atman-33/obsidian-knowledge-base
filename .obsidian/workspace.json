@@ -187,7 +187,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "obsidian-git:Open Git source control": false,
-      "github-copilot-chat:Open Copilot Chat": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -202,8 +201,9 @@
       "ai-agent-sidebar:Open AI agent sidebar": false
     }
   },
-  "active": "247afb8b1ffd773d",
+  "active": "b8e58485391a074d",
   "lastOpenFiles": [
+    "Daily Notes",
     "README.md",
     "Excalidraw/Drawing 2026-05-04 19.48.12.excalidraw.md",
     "AGENTS.md",
