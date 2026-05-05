@@ -1,0 +1,29 @@
+{
+  "pluginList": [
+    "Pierrad/obsidian-github-copilot",
+    "mtymek/opencode-obsidian"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "Pierrad/obsidian-github-copilot",
+      "version": ""
+    },
+    {
+      "repo": "mtymek/opencode-obsidian",
+      "version": ""
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

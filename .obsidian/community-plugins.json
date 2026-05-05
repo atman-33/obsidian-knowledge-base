@@ -1,5 +1,9 @@
 [
   "obsidian-excalidraw-plugin",
   "templater-obsidian",
-  "double-click-image-opener"
+  "double-click-image-opener",
+  "obsidian42-brat",
+  "opencode-obsidian",
+  "github-copilot",
+  "github-copilot-chat"
 ]
