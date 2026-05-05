@@ -31,6 +31,12 @@ This vault uses the LLM Knowledge Base pattern (inspired by Karpathy's llm-wiki)
 
 If Obsidian CLI is unavailable, use filesystem fallbacks for search, tags, and link inspection.
 
+### Inbox Structure Notes
+
+- `Inbox/**/README.md` files are structural notes that explain the intended use of local folders.
+- Keep these README files in place unless the user explicitly requests otherwise.
+- Exclude these README files from ingest, rename, move, summary generation, backlink updates, and routine KB search results unless the task is specifically about folder structure or inbox organization.
+
 ### Index System
 
 - `0. Common/index.md` — top-level vault overview (~30 lines)
@@ -83,3 +89,4 @@ Optional fields: `related`, `source`, `summary`
 - Do not modify `.obsidian/` settings unless explicitly requested.
 - Treat `Templates/` and `.claude/skills/` as source scaffolding; do not repurpose generated KB files as templates.
 - Keep generated KB maintenance files in English unless a note explicitly requires another language.
+- Do not ingest, move, rename, or rewrite `Inbox/**/README.md` files unless the user explicitly asks for that action.

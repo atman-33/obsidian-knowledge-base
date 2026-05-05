@@ -21,6 +21,12 @@ Search the Knowledge Base, synthesize answers from multiple documents, cite sour
 
 Choose the optimal search path by question type. **Do not always start from the top-level index** — pick the fastest route.
 
+### Inbox Structure Notes
+
+- Treat `Inbox/**/README.md` as structural guidance notes for folder usage.
+- Exclude or de-prioritize these README files during routine knowledge queries.
+- Use them when the question is specifically about inbox structure, folder naming, or note organization.
+
 ### Route A: Direct Folder Access
 **When:** Target is clearly in one PARA category.
 ```
@@ -83,6 +89,7 @@ Complex questions may combine routes:
 - Start with `_index.md` for orientation (10-20 lines, cheap)
 - Read full documents only when needed for the answer
 - Use Grep for targeted term search
+- Exclude or de-prioritize `Inbox/**/README.md` unless the query is about structure or workflow
 - Expand with backlinks if initial results are insufficient
 
 ### 3. SYNTHESIZE

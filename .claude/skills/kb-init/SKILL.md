@@ -14,7 +14,7 @@ Set up the Knowledge Base layer on an existing PARA-structured Obsidian vault.
 2. **Create category indexes** — `_index.md` in each PARA directory (Projects, Areas, Resources, Archive) using `Templates/_index.md.template` as the skeleton
 3. **Create top-level index** — `0. Common/index.md` (~30 lines, vault overview)
 4. **Create activity log** — `0. Common/log.md` (append-only)
-5. **Update AGENTS.md** — append KB rules section (preserve existing content)
+5. **Update AGENTS.md** — append KB rules section, including Inbox README preservation rules (preserve existing content)
 6. **Detect obsidian CLI** — check availability, configure fallback strategy
 
 ## Prerequisites
@@ -77,6 +77,7 @@ Step 6: Update AGENTS.md
   KB rules section includes:
     Vault structure description
     KB operation rules (ingest/query/lint)
+    Inbox README preservation rules for `Inbox/**/README.md`
     Tag conventions (#proj/, #type/, #topic/)
     Wikilink rules
     Index management rules

@@ -29,6 +29,12 @@ This vault uses the LLM Knowledge Base pattern (inspired by Karpathy's llm-wiki)
 | **Lint** | `/kb-lint` | Periodic health check |
 | **Index** | `/kb-index` | Rebuild all indexes after reorganization |
 
+### Inbox Structure Notes
+
+- `Inbox/**/README.md` files are structural notes that explain the intended use of local folders.
+- Keep these README files in place unless the user explicitly requests otherwise.
+- Exclude these README files from ingest, rename, move, summary generation, backlink updates, and routine KB search results unless the task is specifically about folder structure or inbox organization.
+
 ### Index System
 
 - `0. Common/index.md` — top-level vault overview (~30 lines)
@@ -76,6 +82,7 @@ Optional fields: `related`, `source`, `summary`
 
 ## Safety Rules
 
+- Keep `Inbox/**/README.md` files in place; do not ingest, move, rename, or rewrite them unless the user explicitly asks for that action.
 {Add your vault-specific safety rules here, e.g.:}
 {- Google Calendar write restrictions}
 {- External API access rules}

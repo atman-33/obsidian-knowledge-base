@@ -11,10 +11,16 @@ Process new documents into the Knowledge Base. Reads content, classifies into th
 ## Usage
 
 ```
-/kb-ingest                      # Process all files in Inbox/
+/kb-ingest                      # Process all eligible files in Inbox/
 /kb-ingest path/to/file.md      # Process a specific file
-/kb-ingest path/to/folder/      # Process all .md files in a folder
+/kb-ingest path/to/folder/      # Process all eligible .md files in a folder
 ```
+
+## Structural README Exception
+
+- Treat `Inbox/**/README.md` as structural guidance notes, not normal ingest candidates.
+- Exclude these README files from default Inbox scans and folder-based batch ingest.
+- If one of these README files is passed explicitly, stop and ask the user before any move, rename, frontmatter, summary, wikilink, backlink, or index action.
 
 ## Execution Flow
 
@@ -165,7 +171,7 @@ Proceed?
 ## Batch Mode
 
 When processing multiple files (Inbox/ or folder):
-1. Read all files first for batch classification
+1. Collect all eligible files first for batch classification, excluding `Inbox/**/README.md`
 2. Classify all at once (cross-document decisions are better)
 3. Build one combined placement plan covering new folders and renames
 4. Ask once for approval if any new subdirectories or renames are proposed
@@ -192,6 +198,8 @@ Read frontmatter for existing tags/links
 
 - **Never delete** the original file — move only
 - **Folder-first is the default** for new ingest in Projects, Areas, Resources, and Archive
+- **Never ingest** `Inbox/**/README.md` during default Inbox scans or folder-based batch processing
+- **Do not add** frontmatter, summaries, backlinks, renames, or moves to `Inbox/**/README.md` unless the user explicitly requests that action
 - **Never create** a new subdirectory without explicit user approval
 - **Ask user** before renaming files, unless the filename is clearly temporary or low-information
 - **Ask user** when classification confidence is low or multiple containers are plausible
