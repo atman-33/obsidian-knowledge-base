@@ -1,0 +1,20 @@
+{
+  "displayAlways": false,
+  "displayTitle": true,
+  "displayH1": true,
+  "displayH2": true,
+  "displayH3": true,
+  "displayH4": true,
+  "displayH5": true,
+  "displayH6": true,
+  "displayInLivePreview": true,
+  "displayInSourceMode": true,
+  "displayInReadingMode": true,
+  "excludeSubsections": false,
+  "includeSectionHeading": false,
+  "stripComments": false,
+  "stripLinks": false,
+  "stripMetadata": true,
+  "stripModifiedEmpty": true,
+  "stripTagLines": false
+}
