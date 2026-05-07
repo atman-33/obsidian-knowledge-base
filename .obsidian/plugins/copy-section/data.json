@@ -1,6 +1,6 @@
 {
   "displayAlways": false,
-  "displayTitle": true,
+  "displayTitle": false,
   "displayH1": true,
   "displayH2": true,
   "displayH3": true,
@@ -11,7 +11,7 @@
   "displayInSourceMode": true,
   "displayInReadingMode": true,
   "excludeSubsections": false,
-  "includeSectionHeading": false,
+  "includeSectionHeading": true,
   "stripComments": false,
   "stripLinks": false,
   "stripMetadata": true,
